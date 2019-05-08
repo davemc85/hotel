@@ -10,7 +10,7 @@
       <input type="text" id="email" v-model="email" required>
     </div>
     <div class="formWrap">
-      <label for="status">Check In Status: </label>
+      <label for="status">Checked in? </label>
       <input type="checkbox" id="status" v-model="status">
     </div>
 

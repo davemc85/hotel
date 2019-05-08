@@ -8,7 +8,7 @@ db.bookings.insertMany([
     status: true
   },
   {
-    name: "Lindsey",
+    name: "Lindsey Izzard",
     email: "lindsey@codeclan.com",
     status: true
   },
