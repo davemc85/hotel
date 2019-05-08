@@ -63,7 +63,7 @@ const createRouter = function (collection) {
       { returnOriginal: false }
     )
     .then(result => {
-      console.log(result.value);
+      // console.log(result.value);
       res.json(result.value)
     })
     .catch(err => {
