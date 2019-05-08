@@ -5,7 +5,7 @@
       <p>{{ booking.email }}</p>
       <p>Customer checked in? {{ booking.status }}</p>
       <label for="status">Checked in? {{ booking.status }}</label>
-      <input type="checkbox" id="status" v-model="booking.status"></br></br>
+      <input v-on:change="handleCheckInChange(booking._id, booking.status)" type="checkbox" id="status" v-model="booking.status"></br></br>
       <button v-on:click="handleDelete(booking._id)">Delete Booking</button>
     </div>
   </div>
@@ -24,6 +24,15 @@ methods: {
     .then(response => {
       eventBus.$emit('refresh-data');
     });
+  },
+  handleCheckInChange(id, status){
+    const payload = {
+      status: status
+    };
+    BookingService.putBooking(id, payload)
+    .then(response => {
+      eventBus.$emit('refresh-data');
+    })
   }
 }}
 </script>

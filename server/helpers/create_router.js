@@ -54,6 +54,8 @@ const createRouter = function (collection) {
     // res.send('Got a PUT request');
     const id = req.params.id;
     const updatedData = req.body;
+    // console.log('id:',id);
+    // console.log('data', updatedData);
     collection
     .findOneAndUpdate(
       { _id: ObjectID(id)},
@@ -61,6 +63,7 @@ const createRouter = function (collection) {
       { returnOriginal: false }
     )
     .then(result => {
+      console.log(result.value);
       res.json(result.value)
     })
     .catch(err => {
