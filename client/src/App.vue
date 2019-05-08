@@ -38,11 +38,12 @@ export default {
 
 <style>
 body {
-  background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('./assets/seo_hotels.jpg') no-repeat;
+  background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('./assets/seo_hotels.jpg') no-repeat center center fixed;
   background-size: cover;
   background-position: center;
-
-
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 </style>
