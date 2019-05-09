@@ -3,9 +3,9 @@
     <div class="booking" v-for="booking in bookings">
       <h2>{{ booking.name }}</h2>
       <p>{{ booking.email }}</p>
-      <p>Customer checked in? {{ booking.status }}</p>
+      <!-- <p>Customer checked in? {{ booking.status }}</p> -->
       <label for="status">Checked in? {{ booking.status }}</label>
-      <input v-on:change="handleCheckInChange(booking._id, booking.status)" type="checkbox" id="status" v-model="booking.status"></br></br>
+      <input v-on:change="handleCheckInChange(booking._id, booking.status)" type="checkbox" id="status" v-model="booking.status"><br><br>
       <button v-on:click="handleDelete(booking._id)">Delete Booking</button>
     </div>
   </div>
